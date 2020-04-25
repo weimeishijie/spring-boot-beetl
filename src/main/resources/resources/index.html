@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>spring-boot-beetl</title>
+</head>
+<body>
+<hr>
+共享变量---------> ${shared}
+<hr>
+共享函数---------> <br/>
+name = ${param.getName()}<br/>
+address = ${param.getAddress()}<br/>
+status = ${param.getStatus()}<br/>
+<hr>
+共享系统常量函数----><br/>
+constants.getConstant("li") = ${constants.getConstant("li")}<br/>
+constants.getConstant("wen") = ${constants.getConstant("wen")}<br/>
+constants.getConstant("ya") = ${constants.getConstant("ya")}<br/>
+<script type="text/javascript">
+   @if(constants.getConstant("boo")){
+       alert("访问成功");
+    @}
+</script>
+</body>
+</html>
